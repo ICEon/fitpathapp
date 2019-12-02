@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+ <head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+ 
+  <title>Fitpath</title>
+
+  <!--grupo CSS-->
+  <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+  <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css">
+  <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css">   
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">      
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">     
+
+  <!--grupo JavaScript-->
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/jquery.mobile-1.4.5.min.js"></script>
+  <script src="js/acciones.js" type="text/javascript"></script>
+  <!-- <script src="phonegap.js" type="text/javascript"></script> -->
+ </head>
+
+ <body>
+ <!-- principal -->
+	
+		
+	
+	
+ <div data-role="page" id="principal" >
+	<div id="modal">
+		<div id="loading">			
+			<!--<span class="cargando"><i class="fa fa-circle"></i></span>
+			<span class="cargando"><i class="fa fa-circle"></i></span>
+			<span class="cargando"><i class="fa fa-circle"></i></span>
+			<span class="cargando"><i class="fa fa-circle"></i></span>
+			<span class="cargando"><i class="fa fa-circle"></i></span>-->
+		<div class="pesa">
+				<div data-role="none;"></div>
+				<div data-role="none;"></div>
+				<div data-role="none;"></div>
+				<div data-role="none;"></div>
+				<div data-role="none;"></div>
+			</div>
+			<div class="pesa">
+				<div data-role="none;"></div>
+				<div data-role="none;"></div>
+				<div data-role="none;"></div>
+				<div data-role="none;"></div>
+				<div data-role="none;"></div>
+			</div>
+			
+			
+		</div>
+		<div>
+			<p>Buscando Usuario</p>
+		</div>
+
+	</div>
+  <div data-role="header" data-position="fixed">
+		<h1>Fitpath Administrador</h1>
+  </div>
+
+  <div role="main" class="ui-content">
+		<div class="login-box">
+			<div class="img-box">
+				<img src="images/gym-blanco.png">
+			</div>
+			<h1>Bienvenido a Fitpath</h1>
+			<div id="formulario">
+				<div>
+					<i class="fa fa-user"></i>
+					<input type="text" id="usuario" name="usuario" placeholder="Usuario" data-role="none">
+				</div>
+				<div>
+					<i class="fa fa-lock"></i>
+					<input type="password" id="contraseña" name="contraseña" placeholder="Password" data-role="none">
+				</div>
+				<div>
+					<a href="#" class="ui-btn ui-btn-corner-all" id="btn-enviar">Enviar</a>
+					<a href="#comentarios" class="ui-btn">comentarios</a>
+				</div>
+			</div>
+		</div>
+  </div>
+	
+	<div data-role="footer" data-position="fixed">
+ 
+  </div>
+ </div>
+	<!-- principal -->	 
+	<!-- comentarios -->
+	 <div data-role="page" id="comentarios">
+		  <div data-role="header" data-position="fixed">
+			</div>
+			<div role="main" class="ui-content">
+				<div class="login-box">
+					<div class="img-box">
+						<img src="images/gym-blanco.png">
+					</div>
+					<h1>Administrador de comentarios</h1>
+					<div class="contenedor-controles">
+						<ul id="controles">
+							<li><input class="filtro-orden" type="radio" checked name="orden" data-role="none" value="actuales"></li>
+							<li><input class="filtro-cuales" type="radio" checked name="cuales" data-role="none" value="todos"></li>
+							<li><input class="filtro-cuales" type="radio" name="cuales" data-role="none" value="activos"></li>
+							<li><input class="filtro-cuales" type="radio" name="cuales" data-role="none" value="inactivos"></li>
+							<li><input class="filtro-orden" type="radio" name="orden" data-role="none" value="antiguos"></li>
+						</ul>
+					</div>
+					<div class="contenedor-mensaje">
+						Del más actual al más antigüo
+					</div>
+					<div class="contenedor-comentarios">
+					</div>
+				</div>
+			</div>
+		 <div data-role="footer" data-position="fixed">
+ 
+  </div>
+	 </div>	 
+	 <!-- comentarios -->
+ </body>
+</html> 

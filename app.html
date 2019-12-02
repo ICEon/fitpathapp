@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+ 
+  <title>Fitpath</title>
+
+  <!--grupo CSS-->
+  <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+  <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css">
+  <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css">   
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">      
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+
+  <!--grupo JavaScript-->
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/jquery.mobile-1.4.5.min.js"></script>
+  <script src="js/acciones.js" type="text/javascript"></script>
+  <!-- <script src="phonegap.js" type="text/javascript"></script> -->
+<style>
+@charset "utf-8";
+ /* CSS Document */
+
+@font-face {
+	font-family: "Nunito";
+	src: url(../fuentes/Nunito-Regular.ttf) format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: Nunito;
+	background-color: #E1E1E1;
+	
+}
+
+#principal{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("../imagenes/gym-Fondom.jpg");
+    background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center top;
+    margin: 0;
+    padding: 0;
+
+}
+
+#principal h1 {
+	margin: 0 20%;
+}
+
+.box{
+    width: 100%;
+    height: 80%;
+    background-color: rgba(0,0,0,0.65);
+    color: #FFF;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 25px;
+}
+
+img {
+		padding: 10px;
+    width: 22%;
+		height: auto;
+    border-radius: 50%;
+    position:absolute;
+		top: -5%;
+		left: 50%;
+		transform: translateX(-50%);
+    background-color: green;
+    overflow: hidden;
+}
+
+
+@media only screen and (max-width: 1024px){
+	
+	img {
+		padding: 10px;
+    width: 10%;
+		height: auto;
+    border-radius: 50%;
+    position:absolute;
+		top: -5%;
+		left: 50%;
+		transform: translateX(-50%);
+    background-color: green;
+    overflow: hidden;
+}
+}
+
+@media only screen and (max-width: 768px){
+	img {
+		padding: 10px;
+    width: 13%;
+		height: auto;
+    border-radius: 50%;
+    position:absolute;
+		top: -5%;
+		left: 50%;
+		transform: translateX(-50%);
+    background-color: green;
+    overflow: hidden;
+}
+}
+
+
+
+.box h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 1.8em;
+	text-shadow: 0 0 0 transparent;
+}
+
+.menu {
+ padding: 0;
+ text-align:center;
+ height:100%;
+ width:100%;
+ text-align:center;
+align-content:center;
+display:flex;
+ }
+ 
+ .menu li {
+ display: inline;
+ }
+ 
+ 
+ .menu li a {
+	 display:block;
+ font-family: Arial;
+ font-size: 11px;
+ text-decoration: none;
+ float: left;
+ padding: 10px;
+ background-color: #1e1e1e;
+ color: #fff;
+ }
+ 
+.menu li a:hover {
+ background-color: green;
+ margin-top: -2;
+ padding-bottom: 12px;
+ }
+
+#principal{
+	text-align:center;
+	}
+#formulario{
+	position:absolute;
+right:25vh;
+left:12vh;
+}
+/*Contenedor Comentarios*/
+.contenedor{
+	width: 100%;
+	
+}
+.usuario{
+	display:flex;
+	width:15%;
+	float:left;
+	}
+.Comentar{
+	padding:5px;
+	border:5px;
+	height: 12vh;
+	width: 100%;
+	}
+
+.comentario{
+	width: 60%;
+}
+.Switch-C{
+	display:flex;
+	width: 20%;
+	float: right;
+	transform:translateY(-190%);
+}
+
+/* Switch */
+.switch{
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px
+}
+
+.switch input {
+	display: none;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background-color: #CCC;
+	-webkit-transition: 4s;
+	transition: .4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked + .slider {
+	background-color: green;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+.slider.round{
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+</style>
+ </head>
+
+ <body>
+ <!-- principal -->
+	
+		
+	
+	
+ <div data-role="page" id="principal" >
+	</div>
+
+  <div role="main" class="ui-content" data-role="none">
+		<div class="box">
+        <h1>Administrador de Comentarios</h1>
+        			<div class="img-box">
+				<img src="images/gym-blanco.png" alt="Imagen-Logo">
+			</div>
+            <div id="formulario" data-position="fixed">
+              <ul class="menu" data-role="none">
+                  <li><a href="#">Z A </a></li>
+                  <li><a href="#">Comentarios Activos</a></li>
+                  <li><a href="#">Comentarios Inactivos</a></li>
+                  <li><a href="#">A Z</a></li>
+              </ul>
+            </div>
+			<br><br><br>
+			<div class="Contenedor">
+    <div class="Comentar">
+         <div class="usuario">
+         	<h5>El yisus</h5>
+         </div>
+		 <div class="comentario">
+			 <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet pharetra risus, id facilisis dui fringilla ut. </h6>
+		 </div>
+		 <div class="Switch-C">
+			 <label class="switch">
+				 <input type="checkbox">
+				 <div class="slider round"></div>
+			 </label>
+		 </div>
+    </div>
+		<div class="Comentar">
+        	<div class="usuario">
+         	<h5>El yisus</h5>
+         </div>
+			<div class="comentario"><h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet pharetra risus, id facilisis dui fringilla ut.</h6>
+		 </div>
+			<div class="Switch-C">
+			 <label class="switch">
+				 <input type="checkbox">
+				 <div class="slider round"></div>
+			 </label>
+		 </div>
+		</div>
+		<div class="Comentar">
+        <div class="usuario">
+         	<h5>El yisus</h5>
+         </div>
+			<div class="comentario"><h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet pharetra risus, id facilisis dui fringilla ut.</h6>
+		 </div>
+			<div class="Switch-C">
+			 <label class="switch">
+				 <input type="checkbox">
+				 <div class="slider round"></div>
+			 </label>
+		 </div>
+		</div>
+    </div>
+		</div>
+  </div>
+	
+	<div data-role="footer" data-position="fixed">
+  </div>
+ <!-- principal -->	 
+ </body>
+</html> 
